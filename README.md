@@ -77,7 +77,7 @@ footer{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#4
 <section class="hero">
 <div class="overlay">
 <h1>Selamat Ulang Tahun Cintakuu Sayanggkuu🎉🎊💕💞💖</h1>
-<p>Terima kasih telah menjadi bagian terindah selama 2 tahun ini.</p>
+<p> Ada siapin sesuatu ini buat ayangg semoga ayang suka yaa.. </p>
 </div>
 </section>
 
@@ -119,8 +119,8 @@ footer{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#4
 
 <footer>
 <h2>Selamat Ulang Tahun yang Ke-20 Ayangg💞💖</h2>
-<p>Aku bersyukur bisa mengenalmu, mencintaimu, dan berjalan bersamamu.</p>
-<h3>— Anggut 🤍</h3>
+<p>Aku bersyukur bisa ketemu ayangg, bisa mencintai ayang, dan bisa berjalan bersama ayang dihari-hariku.</p>
+<h3> Anggut 🤍</h3>
 </footer>
 </div>
 
