@@ -112,7 +112,7 @@ footer{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#4
 
 <section class="memories-section">
 <h2>📸 Kenangan Kita</h2><br>
-<div class="memories-btn" onclick="toggleMemories()">📷 Klik untuk Melihat Kenangan</div>
+<div class="memories-btn" onclick="toggleMemories()">📸</div>
 <div id="memoriesSlider" style="display:none;margin-top:30px;">
 <div class="slider-container" id="sliderContainer">
 <button class="slider-arrow prev" onclick="prevSlide()">❮</button>
