@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrea Nadine ❤️</title>
+<title>Andrea Nadine💖</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
@@ -45,7 +45,7 @@ footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/
 
 <div id="login" class="page active center">
 <div class="card">
-<h2>💖 Website Rahasia Untuk Ayangg</h2><br>
+<h2>💖Website Rahasia Untuk Ayangg🤍</h2><br>
 <input id="nama" placeholder="Masukkan Nama">
 <input id="pin" type="password" placeholder="PIN">
 <button onclick="login()">Buka Hadiah</button>
@@ -55,14 +55,14 @@ footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/
 
 <div id="gift" class="page center">
 <h1>🎁</h1>
-<h2>Ada hadiah spesial dari Anggut</h2><br>
+<h2>Box Misterius❤️‍🔥</h2><br>
 <button onclick="showMain()">Klik Untuk Membuka</button>
 </div>
 
 <div id="main" class="page" style="display:none;flex-direction:column">
 <section class="hero">
 <div class="overlay">
-<h1>Selamat Ulang Tahun Andrea Nadine ❤️</h1>
+<h1>Selamat Ulang Tahun Cintakuu Sayanggkuu🎉🎊💕💞💖</h1>
 <p>Terima kasih telah menjadi bagian terindah selama 2 tahun ini.</p>
 </div>
 </section>
@@ -70,8 +70,14 @@ footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/
 <section class="section">
 <h2>📸 Kenangan Kita</h2><br>
 <div class="slider">
-<img src="foto1.jpg"><img src="foto2.jpg"><img src="foto3.jpg">
-<img src="foto4.jpg"><img src="foto5.jpg"><img src="foto6.jpg">
+<img src="<img width="3072" height="4080" alt="1000420980" src="https://github.com/user-attachments/assets/3041bcbe-69d3-4953-9074-acc49fb48329" />
+"><img src="<img width="2464" height="3280" alt="1000345774" src="https://github.com/user-attachments/assets/0b9eeb7a-db49-41dd-83ef-96e36196aba1" />
+"><img src="<img width="2464" height="3280" alt="1000006791" src="https://github.com/user-attachments/assets/1b42c70e-8eb0-4f35-bf51-2faea3625d6a" />
+">
+<img src="<img width="1080" height="1920" alt="f2b68b44-2fd0-4707-9aa2-286a8b3e8ab1-1_all_717" src="https://github.com/user-attachments/assets/57d7073f-6442-40be-90b4-d488dffc4d1c" />
+"><img src="<img width="3112" height="4192" alt="f2b68b44-2fd0-4707-9aa2-286a8b3e8ab1-1_all_1040" src="https://github.com/user-attachments/assets/1d4b194e-d0c7-4a84-b161-177242c46c60" />
+"><img src="<img width="2160" height="3840" alt="f2b68b44-2fd0-4707-9aa2-286a8b3e8ab1-1_all_1095" src="https://github.com/user-attachments/assets/0f7bf675-03f1-4c43-b354-1626196a8f99" />
+">
 </div>
 </section>
 
@@ -90,41 +96,65 @@ footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/
 <h2>📬 Surat Rahasia</h2><br>
 <div class="envelope" onclick="openLetter()"></div>
 <div class="letter" id="letter">
-<h3>Untuk Andrea Nadine ❤️</h3><br>
+<h3>Untuk Ayanggkuu🥰💖</h3><br>
 <p id="typing"></p>
 </div>
 </section>
 
 <footer>
-<h2>Selamat Ulang Tahun Ke-20 Ayangg ❤️</h2>
+<h2>Selamat Ulang Tahun yang Ke-20 Ayangg💞💖</h2>
 <p>Aku bersyukur bisa mengenalmu, mencintaimu, dan berjalan bersamamu.</p>
-<h3>— Anggut ❤️</h3>
+<h3>— Anggut 🤍</h3>
 </footer>
 </div>
 
 <audio autoplay loop><source src="music.mp3" type="audio/mpeg"></audio>
 
 <script>
-const text=`Selamat ulang tahun yang ke-20, Ayangg.
+const text=`Untuk Ayangg, Andrea Nadine ❤️
 
-Terima kasih karena sudah hadir dalam hidupku selama dua tahun terakhir. Aku bersyukur karena dari sekian banyak kemungkinan di dunia ini, aku dipertemukan dengan seseorang sebaik dan seistimewa dirimu.
+Selamat ulang tahun yang ke-20, Ayangg.
 
-Terima kasih atas perhatian, kesabaran, dukungan, dan semua kenangan yang telah kita lalui bersama. Kehadiranmu membuat banyak hariku menjadi lebih berarti.
+Hari ini adalah hari yang sangat spesial karena hari ini adalah hari lahir seseorang putri kecil yang begitu berarti dalam hidupku. Seseorang yang selama dua tahun terakhir telah mengisi hari-hariku dengan kebahagiaan, tawa, cerita, dan begitu banyak kenangan yang tidak akan pernah bisa aku lupakan.
 
-Di usia yang baru ini, aku berharap semua impianmu perlahan menjadi kenyataan. Semoga kamu selalu diberikan kesehatan, kebahagiaan, keberhasilan, dan banyak alasan untuk tersenyum.
+Di hari ulang tahunmu ini, aku ingin mengucapkan terima kasih untuk semua hal yang sudah kamu berikan kepadaku. Terima kasih karena telah hadir dalam hidupku. Terima kasih karena telah menjadi tempatku bercerita, berbagi tawa, berbagi keluh kesah, dan menjadi salah satu alasan terbesar mengapa aku selalu bersemangat menjalani hari.
 
-Aku sayang kamu dengan tulus, dan aku berharap bisa terus menciptakan kenangan indah bersamamu.
+Aku bersyukur kepada Tuhan karena telah mempertemukanku denganmu. Dari sekian banyak orang di dunia ini, aku merasa beruntung karena bisa mengenalmu, mencintaimu, dan berjalan bersamamu hingga sejauh ini. Dua tahun yang kita lalui mungkin tidak selalu sempurna, tetapi setiap momen yang kita lewati bersama memiliki tempat yang sangat berharga di hatiku.
+
+Ayangg, aku berharap di usia yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, kekuatan, dan keberhasilan dalam setiap langkah yang kamu ambil. Semoga semua impian, harapan, dan cita-cita yang kamu simpan perlahan menjadi kenyataan. Semoga setiap hari yang kamu jalani dipenuhi dengan alasan untuk tersenyum dan merasa bahagia.
+
+Aku juga ingin kamu tahu bahwa kehadiranmu sangat berarti bagiku. Senyummu, perhatianmu, cara kamu peduli, dan semua hal kecil yang kamu lakukan sering kali menjadi sesuatu yang membuat hariku terasa lebih baik. Mungkin aku tidak selalu pandai mengungkapkannya, tetapi aku benar-benar menghargai dan mensyukuri setiap hal yang ada dalam dirimu.
+
+Terima kasih karena sudah hadir dalam hidupku selama dua tahun terakhir. Aku bersyukur karena dari sekian banyak kemungkinan di dunia ini, aku dipertemukan dengan seseorang sebaik dan seistimewa dirimu
+
+Terima kasih karena sudah bertahan bersamaku selama ini. Terima kasih karena sudah menerima segala kekuranganku. Terima kasih karena tetap memilih untuk berjalan bersamaku hingga hari ini.
+
+Dan yang paling penting, terima kasih karena sudah menjadi Andrea Nadine yang aku kenal dan aku sayangi.
+
+Di hari spesialmu ini, aku tidak meminta banyak hal selain melihatmu bahagia. Karena kebahagiaanmu juga menjadi kebahagiaanku.
+
+Sekali lagi, selamat ulang tahun yang ke-20, Ayangg.
+
+Semoga tahun ini menjadi tahun yang penuh kebahagiaan, keberuntungan, dan cerita indah untukmu.
+
+Aku sayang kamu, hari ini, besok, dan selama Tuhan masih mengizinkan aku untuk mencintaimu. ❤️
 
 Dengan penuh cinta,
-Anggut ❤️`;
+
+Anggut ❤️
+
+
+Selamat ulang tahun yang ke-20, Cantikuu🎊🎉🥳🥰💞💖.
+
+`;
 
 function login(){
  let n=document.getElementById('nama').value.toLowerCase();
  let p=document.getElementById('pin').value;
- if((n.includes('andrea')||n.includes('nadine'))&&p==='161223'){
+ if((n.includes('andrea')||n.includes('nadine') ||n.includes('andrea nadine'))&&p==='161223'){
    login.style.display='none';
    gift.style.display='flex';
- } else msg.innerText='Nama atau PIN salah';
+ } else msg.innerText='Nama anda atau PIN salah';
 }
 
 function showMain(){
@@ -146,7 +176,7 @@ function openLetter(){
 setInterval(()=>{
  let h=document.createElement('div');
  h.className='heart';
- h.innerHTML='❤️';
+ h.innerHTML='🩷';
  h.style.left=Math.random()*100+'vw';
  h.style.fontSize=(15+Math.random()*20)+'px';
  h.style.animationDuration=(3+Math.random()*3)+'s';
