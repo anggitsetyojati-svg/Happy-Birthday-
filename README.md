@@ -1,4 +1,3 @@
-# HAPPY BIRTHDAY
 💖🎉🎊SELAMAT ULANG TAHUN SAYANGG 🎊🎉💖
 <html lang="id">
 <head>
@@ -35,7 +34,10 @@ h1{font-size:clamp(2rem,5vw,4rem)}
 .step{background:rgba(255,255,255,.08);padding:20px;border-radius:18px}
 footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/cover}
 .heart{position:fixed;top:-10px;animation:fall linear forwards}
-@keyframes fall{to{transform:translateY(110vh)}}
+@keyframes fall{to{transform:translateY(110vh)
+ {
+    flex-direction:column;
+}}}
 </style>
 </head>
 <body>
@@ -149,17 +151,27 @@ Selamat ulang tahun yang ke-20, Cantikuu🎊🎉🥳🥰💞💖.
 `;
 
 function login(){
- let n=document.getElementById('nama').value.toLowerCase();
- let p=document.getElementById('pin').value;
- if((n.includes('andrea')||n.includes('nadine') ||n.includes('andrea nadine'))&&p==='161223'){
-   login.style.display='none';
-   gift.style.display='flex';
- } else msg.innerText='Nama anda atau PIN salah';
+ let n = document.getElementById('nama').value.toLowerCase();
+ let p = document.getElementById('pin').value;
+
+ if((n.includes('andrea') || n.includes('nadine') || n.includes('andrea nadine')) && p === '161223'){
+
+   document.getElementById('login').style.display = 'none';
+   document.getElementById('gift').style.display = 'flex';
+
+ } else {
+
+   document.getElementById('msg').innerText = 'Nama anda atau PIN salah';
+
+ }
 }
 
 function showMain(){
- gift.style.display='none';
- main.style.display='flex';
+
+ document.getElementById('gift').style.display = 'none';
+ document.getElementById('main').style.display = 'flex';
+
+}
 }
 
 function openLetter(){
