@@ -50,7 +50,7 @@ footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/
 <h2>💖Website Rahasia Untuk Ayangg🤍</h2><br>
 <input id="nama" placeholder="Masukkan Nama">
 <input id="pin" type="password" placeholder="PIN">
-<button click="function()">Buka Hadiah</button>
+<button onclick="login()">Buka Hadiah</button>
 <p id="msg"></p>
 </div>
 </div>
