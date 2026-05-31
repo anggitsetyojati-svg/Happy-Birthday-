@@ -1,4 +1,4 @@
-# HAPPY-BIRTHDAY-
+# HAPPY BIRTHDAY
 💖🎉🎊SELAMAT ULANG TAHUN SAYANGG 🎊🎉💖
 <html lang="id">
 <head>
@@ -48,7 +48,7 @@ footer{padding:120px 20px;text-align:center;background:url('ending.jpg') center/
 <h2>💖Website Rahasia Untuk Ayangg🤍</h2><br>
 <input id="nama" placeholder="Masukkan Nama">
 <input id="pin" type="password" placeholder="PIN">
-<button click="login()">Buka Hadiah</button>
+<button click="function()">Buka Hadiah</button>
 <p id="msg"></p>
 </div>
 </div>
