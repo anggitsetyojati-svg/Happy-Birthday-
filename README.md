@@ -22,8 +22,21 @@ button{border:none;padding:14px 28px;border-radius:999px;background:#fff;color:#
 .overlay{background:rgba(0,0,0,.55);padding:40px;border-radius:30px;text-align:center}
 h1{font-size:clamp(2rem,5vw,4rem)}
 .section{padding:80px 20px;max-width:1200px;margin:auto}
-.slider{display:flex;flex-direction:column;gap:20px;align-items:center;scroll-behavior:smooth}
-.slider img{width:280px;height:380px;object-fit:cover;border-radius:22px;flex:none}
+
+/* Slider styles */
+.slider-container{position:relative;width:min(90%,420px);height:400px;margin:auto;border-radius:22px;overflow:hidden;touch-action:pan-y}
+.slider-wrapper{display:flex;height:100%;transition:transform 0.3s ease-out}
+.slider-wrapper.dragging{transition:none}
+.slider img{width:100%;height:100%;object-fit:cover;border-radius:22px;flex-shrink:0}
+.slider-nav{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.slider-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:all 0.3s}
+.slider-dot.active{background:#fff;width:30px;border-radius:5px}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.3);border:none;color:#fff;font-size:24px;padding:10px 15px;cursor:pointer;border-radius:5px;transition:background 0.3s;z-index:10}
+.slider-arrow:hover{background:rgba(255,255,255,.6)}
+.slider-arrow.prev{left:10px}
+.slider-arrow.next{right:10px}
+.slider-counter{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.6);color:#fff;padding:8px 12px;border-radius:20px;font-size:12px}
+
 .reason-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
 .reason{background:rgba(255,255,255,.08);padding:18px;border-radius:18px}
 .envelope-wrap{text-align:center}
@@ -70,7 +83,9 @@ footer{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#4
 
 <section class="section">
 <h2>📸 Kenangan Kita</h2><br>
-<div class="slider">
+<div class="slider-container" id="sliderContainer">
+<button class="slider-arrow prev" onclick="prevSlide()">❮</button>
+<div class="slider-wrapper" id="sliderWrapper">
 <img src="https://github.com/user-attachments/assets/3041bcbe-69d3-4953-9074-acc49fb48329" />
 <img src="https://github.com/user-attachments/assets/0b9eeb7a-db49-41dd-83ef-96e36196aba1" />
 <img src="https://github.com/user-attachments/assets/1b42c70e-8eb0-4f35-bf51-2faea3625d6a" />
@@ -78,6 +93,10 @@ footer{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#4
 <img src="https://github.com/user-attachments/assets/1d4b194e-d0c7-4a84-b161-177242c46c60" />
 <img src="https://github.com/user-attachments/assets/0f7bf675-03f1-4c43-b354-1626196a8f99" />
 </div>
+<button class="slider-arrow next" onclick="nextSlide()">❯</button>
+<div class="slider-counter"><span id="sliderIndex">1</span>/<span id="sliderTotal">6</span></div>
+</div>
+<div class="slider-nav" id="sliderNav"></div>
 </section>
 
 <section class="section">
@@ -110,17 +129,17 @@ const text=`Untuk Ayangg, Andrea Nadine ❤️
 
 Selamat ulang tahun yang ke-20, Ayangg.
 
-Hari ini adalah hari yang sangat spesial karena hari ini adalah hari lahir seseorang putri kecil yang begitu berarti dalam hidupku. Seseorang yang selama dua tahun terakhir telah mengisi hari-hariku d[...]
+Hari ini adalah hari yang sangat spesial karena hari ini adalah hari lahir seseorang putri kecil yang begitu berarti dalam hidupku. Seseorang yang selama dua tahun terakhir telah mengisi hari-hariku dengan kebahagiaan dan cinta.
 
-Di hari ulang tahunmu ini, aku ingin mengucapkan terima kasih untuk semua hal yang sudah kamu berikan kepadaku. Terima kasih karena telah hadir dalam hidupku. Terima kasih karena telah menjadi tempat [...]
+Di hari ulang tahunmu ini, aku ingin mengucapkan terima kasih untuk semua hal yang sudah kamu berikan kepadaku. Terima kasih karena telah hadir dalam hidupku. Terima kasih karena telah menjadi tempat pelukanku di saat aku merasa lelah.
 
-Aku bersyukur kepada Tuhan karena telah mempertemukanku denganmu. Dari sekian banyak orang di dunia ini, aku merasa beruntung karena bisa mengenalmu, mencintaimu, dan berjalan bersamamu hingga sejauh [...]
+Aku bersyukur kepada Tuhan karena telah mempertemukanku denganmu. Dari sekian banyak orang di dunia ini, aku merasa beruntung karena bisa mengenalmu, mencintaimu, dan berjalan bersamamu hingga sejauh ini.
 
-Ayangg, aku berharap di usia yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, kekuatan, dan keberhasilan dalam setiap langkah yang kamu ambil. Semoga semua impian, harapan, dan cita-cita ya[...]
+Ayangg, aku berharap di usia yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, kekuatan, dan keberhasilan dalam setiap langkah yang kamu ambil. Semoga semua impian, harapan, dan cita-cita yang kamu miliki menjadi kenyataan.
 
-Aku juga ingin kamu tahu bahwa kehadiranmu sangat berarti bagiku. Senyummu, perhatianmu, cara kamu peduli, dan semua hal kecil yang kamu lakukan sering kali menjadi sesuatu yang membuat hariku terasa [...]
+Aku juga ingin kamu tahu bahwa kehadiranmu sangat berarti bagiku. Senyummu, perhatianmu, cara kamu peduli, dan semua hal kecil yang kamu lakukan sering kali menjadi sesuatu yang membuat hariku terasa lebih bermakna.
 
-Terima kasih karena sudah hadir dalam hidupku selama dua tahun terakhir. Aku bersyukur karena dari sekian banyak kemungkinan di dunia ini, aku dipertemukan dengan seseorang sebaik dan seistimewa dirim[...]
+Terima kasih karena sudah hadir dalam hidupku selama dua tahun terakhir. Aku bersyukur karena dari sekian banyak kemungkinan di dunia ini, aku dipertemukan dengan seseorang sebaik dan seistimewa dirimu.
 
 Terima kasih karena sudah bertahan bersamaku selama ini. Terima kasih karena sudah menerima segala kekuranganku. Terima kasih karena tetap memilih untuk berjalan bersamaku hingga hari ini.
 
@@ -141,6 +160,105 @@ Anggut 🤍
 Selamat ulang tahun yang ke-20, Cantikuu🎊🎉🥳🥰💞💖.
 `;
 
+// Slider functionality
+let currentSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+let isDragging = false;
+
+const sliderWrapper = document.getElementById('sliderWrapper');
+const sliderContainer = document.getElementById('sliderContainer');
+const images = sliderWrapper.querySelectorAll('img');
+const totalSlides = images.length;
+
+// Initialize slider nav
+function initSliderNav() {
+  const sliderNav = document.getElementById('sliderNav');
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    sliderNav.appendChild(dot);
+  }
+  document.getElementById('sliderTotal').textContent = totalSlides;
+}
+
+function updateSlider() {
+  sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.slider-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentSlide);
+  });
+  document.getElementById('sliderIndex').textContent = currentSlide + 1;
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+function goToSlide(n) {
+  currentSlide = n;
+  updateSlider();
+}
+
+// Touch/Swipe handlers
+sliderContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+  isDragging = true;
+  sliderWrapper.classList.add('dragging');
+}, false);
+
+sliderContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  isDragging = false;
+  sliderWrapper.classList.remove('dragging');
+  handleSwipe();
+}, false);
+
+function handleSwipe() {
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  }
+}
+
+// Mouse drag support
+sliderContainer.addEventListener('mousedown', (e) => {
+  touchStartX = e.clientX;
+  isDragging = true;
+  sliderWrapper.classList.add('dragging');
+}, false);
+
+sliderContainer.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const diff = touchStartX - e.clientX;
+  sliderWrapper.style.transform = `translateX(calc(-${currentSlide * 100}% - ${diff}px))`;
+}, false);
+
+sliderContainer.addEventListener('mouseup', (e) => {
+  touchEndX = e.clientX;
+  isDragging = false;
+  sliderWrapper.classList.remove('dragging');
+  handleSwipe();
+}, false);
+
+sliderContainer.addEventListener('mouseleave', () => {
+  if (isDragging) {
+    isDragging = false;
+    sliderWrapper.classList.remove('dragging');
+    updateSlider();
+  }
+}, false);
+
 function login(){
  let n = document.getElementById('nama').value.toLowerCase();
  let p = document.getElementById('pin').value;
@@ -160,6 +278,7 @@ function login(){
 function showMain(){
  document.getElementById('gift').style.display = 'none';
  document.getElementById('main').style.display = 'flex';
+ initSliderNav();
 }
 
 function openLetter(){
