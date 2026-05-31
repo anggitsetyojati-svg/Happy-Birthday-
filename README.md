@@ -1,4 +1,4 @@
-💖🎉🎊SELAMAT ULANG TAHUN SAYANGG 🎊🎉💖
+💖🎉🎊SELAMAT ULANG TAHUN SAYANGG 🎊🎉
 <html lang="id">
 <head>
 <meta charset="UTF-8">
