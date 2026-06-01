@@ -24,18 +24,24 @@ h1{font-size:clamp(2rem,5vw,4rem)}
 .section{padding:80px 20px;max-width:1200px;margin:auto}
 
 /* Countdown styles */
-.countdown-page{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:100;background:#0b1020}
+.countdown-page{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:100;background:linear-gradient(135deg,#0b1020,#1b1f3a,#432c52)}
 .countdown-page.active{display:flex}
 .countdown-container{text-align:center;position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;overflow:hidden}
 
-/* Character grid background */
-.char-grid{position:absolute;width:100%;height:100%;top:0;left:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(30px,1fr));grid-template-rows:repeat(auto-fill,minmax(30px,1fr));z-index:1;opacity:0.5}
-.char-cell{display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;color:#ff1493;text-shadow:0 0 10px #ff1493;font-family:monospace}
+/* Neon text */
+.neon-text{font-size:clamp(2rem,8vw,4rem);font-weight:700;color:#00f0ff;text-shadow:0 0 10px #00f0ff,0 0 20px #ff1493,0 0 30px #00f0ff,0 0 40px #ff1493;letter-spacing:3px;margin-bottom:50px;animation:neonFlicker 0.15s infinite}
 
-.countdown-number{font-size:150px;font-weight:700;z-index:10;animation:popOut 0.8s ease-out;color:#ff1493;text-shadow:0 0 30px #ff1493,0 0 60px #ff1493;letter-spacing:10px}
-.emoji-particle{position:absolute;font-size:60px;animation:floatAway 1.2s ease-out forwards;z-index:5}
-@keyframes popOut{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:0.3}}
-@keyframes floatAway{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0.5)}}
+@keyframes neonFlicker{0%,19%,21%,23%,25%,54%,56%,100%{text-shadow:0 0 10px #00f0ff,0 0 20px #ff1493,0 0 30px #00f0ff,0 0 40px #ff1493}20%,24%,55%{text-shadow:none}}
+
+/* Glowing heart */
+.glowing-heart{position:relative;font-size:200px;animation:heartPulse 1.5s ease-in-out infinite;filter:drop-shadow(0 0 20px #ff1493) drop-shadow(0 0 40px #ff1493) drop-shadow(0 0 60px #ff1493)}
+
+@keyframes heartPulse{0%,100%{transform:scale(1);filter:drop-shadow(0 0 20px #ff1493) drop-shadow(0 0 40px #ff1493) drop-shadow(0 0 60px #ff1493)}50%{transform:scale(1.1);filter:drop-shadow(0 0 30px #ff1493) drop-shadow(0 0 50px #ff1493) drop-shadow(0 0 80px #ff1493)}}
+
+/* Particles */
+.particle-heart{position:absolute;font-size:40px;animation:particleFloat 2s ease-out forwards;z-index:5}
+
+@keyframes particleFloat{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0.3)}}
 
 /* Slider styles */
 .slider-container{position:relative;width:min(90%,420px);height:400px;margin:auto;border-radius:22px;overflow:hidden;touch-action:pan-y}
@@ -96,9 +102,9 @@ footer{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#4
 </div>
 
 <div id="countdown" class="countdown-page">
-<div class="char-grid" id="charGrid"></div>
 <div class="countdown-container">
-<div class="countdown-number" id="countdownNumber">3</div>
+<div class="neon-text">Selamat Ulang Tahun</div>
+<div class="glowing-heart" id="glowingHeart">💜</div>
 </div>
 </div>
 
@@ -152,15 +158,15 @@ const text=`Untuk Ayangg, Andrea Nadine ❤️
 
 Selamat ulang tahun yang ke-20, Ayangg.
 
-Hari ini adalah hari yang sangat spesial karena hari ini adalah hari lahir seseorang putri kecil yang begitu berarti dalam hidupku. Seseorang yang selama dua tahun terakhir telah mengisi hari-hariku dengan cinta, perhatian, dan kebahagiaan yang tak ternilai.
+Hari ini adalah hari yang sangat spesial karena hari ini adalah hari lahir seseorang putri kecil yang begitu berarti dalam hidupku. Seseorang yang selama dua tahun terakhir telah mengisi hari-hariku dengan warna-warni dan kebahagiaan.
 
-Di hari ulang tahunmu ini, aku ingin mengucapkan terima kasih untuk semua hal yang sudah kamu berikan kepadaku. Terima kasih karena telah hadir dalam hidupku. Terima kasih karena telah menjadi tempat berlindung dan sumber kebahagiaan di setiap harinya.
+Di hari ulang tahunmu ini, aku ingin mengucapkan terima kasih untuk semua hal yang sudah kamu berikan kepadaku. Terima kasih karena telah hadir dalam hidupku. Terima kasih karena telah menjadi tempat aku bisa berbagi suka dan duka.
 
 Aku bersyukur kepada Tuhan karena telah mempertemukanku denganmu. Dari sekian banyak orang di dunia ini, aku merasa beruntung karena bisa mengenalmu, mencintaimu, dan berjalan bersamamu hingga sejauh ini.
 
-Ayangg, aku berharap di usia yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, kekuatan, dan keberhasilan dalam setiap langkah yang kamu ambil. Semoga semua impian, harapan, dan cita-cita kamu terwujud dengan indah.
+Ayangg, aku berharap di usia yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, kekuatan, dan keberhasilan dalam setiap langkah yang kamu ambil. Semoga semua impian, harapan, dan cita-cita kamu dapat terwujud dengan sempurna.
 
-Aku juga ingin kamu tahu bahwa kehadiranmu sangat berarti bagiku. Senyummu, perhatianmu, cara kamu peduli, dan semua hal kecil yang kamu lakukan sering kali menjadi sesuatu yang membuat hariku terasa lebih bermakna.
+Aku juga ingin kamu tahu bahwa kehadiranmu sangat berarti bagiku. Senyummu, perhatianmu, cara kamu peduli, dan semua hal kecil yang kamu lakukan sering kali menjadi sesuatu yang membuat hariku terasa lebih bermakna dan berwarna.
 
 Terima kasih karena sudah hadir dalam hidupku selama dua tahun terakhir. Aku bersyukur karena dari sekian banyak kemungkinan di dunia ini, aku dipertemukan dengan seseorang sebaik dan seistimewa dirimu.
 
@@ -296,66 +302,43 @@ sliderContainer.addEventListener('mouseleave', () => {
   }
 }, false);
 
-// Countdown functionality - Character grid
-function createCharGrid() {
-  const charGrid = document.getElementById('charGrid');
-  charGrid.innerHTML = '';
-  const chars = 'HAPPYBIRTHDAYY';
-  const cols = Math.ceil(window.innerWidth / 30);
-  const rows = Math.ceil(window.innerHeight / 30);
-  
-  for (let i = 0; i < cols * rows; i++) {
-    const cell = document.createElement('div');
-    cell.className = 'char-cell';
-    cell.textContent = chars[Math.floor(Math.random() * chars.length)];
-    charGrid.appendChild(cell);
-  }
-}
-
 function startCountdown() {
   document.getElementById('gift').style.display = 'none';
   document.getElementById('countdown').classList.add('active');
-  createCharGrid();
   
   let count = 3;
-  const countdownNumber = document.getElementById('countdownNumber');
+  const countdownNumber = document.getElementById('glowingHeart');
   
   const countdown = setInterval(() => {
-    const emojis = ['💕', '🎈', '🎉', '🎊', '💖'];
+    const heartEmojis = ['💜', '💕', '💖', '❤️', '🩷'];
     const container = document.getElementById('countdown').querySelector('.countdown-container');
     
-    // Pecah angka menjadi emoji
-    for (let i = 0; i < 40; i++) {
+    // Create particle hearts
+    for (let i = 0; i < 30; i++) {
       const particle = document.createElement('div');
-      particle.className = 'emoji-particle';
-      particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      const angle = (i / 40) * Math.PI * 2;
-      const distance = 250;
+      particle.className = 'particle-heart';
+      particle.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+      const angle = (i / 30) * Math.PI * 2;
+      const distance = 300;
       particle.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
       particle.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
       particle.style.left = '50%';
       particle.style.top = '50%';
       container.appendChild(particle);
-      setTimeout(() => particle.remove(), 1200);
+      setTimeout(() => particle.remove(), 2000);
     }
     
     count--;
-    if (count >= 0) {
-      countdownNumber.textContent = count;
-      countdownNumber.style.animation = 'none';
-      setTimeout(() => {
-        countdownNumber.style.animation = 'popOut 0.8s ease-out';
-      }, 10);
-    } else {
+    if (count < 0) {
       clearInterval(countdown);
       setTimeout(() => {
         document.getElementById('countdown').classList.remove('active');
         document.getElementById('main').style.display = 'flex';
         initSliderNav();
         updateSlider();
-      }, 800);
+      }, 1500);
     }
-  }, 1000);
+  }, 1500);
 }
 
 function toggleMemories() {
